@@ -1,0 +1,106 @@
+.parallax {
+    height: 600px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-top:40px;
+}
+.parallax h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 75px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.parallax-1 {
+    background-image: url("http://img.lum.dolimg.com/v1/images/tfa_poster_wide_header_adb92fa0.jpeg?region=61%2C271%2C1937%2C1089&width=600");
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.heroCard {
+    width: 300px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+}
+.heroCard:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.heroName {
+    color: #D11C24;
+}
+.description-text {
+    font-size: .7em;
+}
+.hero-image {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0A2933;
+    border-radius: 50%;
+    transition-property: border-radius;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+img:hover {
+    border-radius: 0;
+}
+
+.group {
+    position:relative;
+    margin: 0 auto;
+    margin-bottom:45px;
+    display: flex;
+    justify-content: center;
+}
+input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #042029;
+    background-color: #819090;
+    margin-top: 30px;
+    color: #D11C24;
+}
+input:focus {
+    outline:none;
+    border-bottom-color: #D11C24;
+}
+
+/* LABEL ======================================= */
+label 				 {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:relative;
+    pointer-events:none;
+    right: 316px;
+    top:40px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+    top:15px;
+    font-size:14px;
+    color:#D11C24;
+}
+Status API Training Shop Blog About Pricing

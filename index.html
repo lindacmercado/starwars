@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="starwars">
+<head>
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body ng-controller="MainCtrl">
+
+<section class="module parallax parallax-1">
+    <div class="container">
+        <h1>Star Wars</h1>
+    </div>
+</section>
+
+<div class="group">
+    <input type="text" require ng-model="myFilter">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Filter by...</label>
+</div>
+<div class="container">
+    <div class="heroCard" ng-repeat="char in chars | filter:{name:myFilter}">
+        <h3 class="heroName">{{ char.name }}</h3>
+        <div class="hero-image">
+            <img ng-src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}"/>
+        </div>
+        <h4 class="description">Description</h4>
+        <p class="description-text">{{ char.description || "This character needs no description!"}}</p>
+    </div>
+</div>
+<!--angular-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+<!--app-->
+<script src="./app.js"></script>
+<!--controller-->
+<script src="./controller/MainCtrl.js"></script>
+<!--service-->
+<script src="./services/dataService.js"></script>
+</body>
+</html>
