@@ -6,13 +6,12 @@ angular.module('starwars').service('dataService', ['$http', '$q', function($http
       var defer = $q.defer();
       $http({
         method: 'JSONP',
-        url: baseUrl + 'people/1'
+        url: baseUrl + 'people/'
       })
       .then(function(data){
         var characters = [];
         console.log(data);
         var charData = data.data.results;
-
         for(var i = 0; i < characters.length; i++) {
           var char = {};
           char.name = charData[i].name;
